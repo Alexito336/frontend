@@ -1,0 +1,104 @@
+/* --- Punto 6: Configuración Global y Tipografía --- */
+* {
+    box-sizing: border-box; /* Modelo de caja: asegura que padding no afecte el ancho total */
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+/* --- Punto 6: Clase CSS Reutilizable --- */
+.content-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
+    padding: 20px; /* Modelo de caja: padding */
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto; /* Modelo de caja: margin */
+    padding: 0 20px;
+}
+
+/* --- Punto 6: Color de fondo para sección (Header) --- */
+.main-header {
+    background-color: #1a3a5a;
+    color: #ffffff;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* --- Punto 7: Implementación de Flexbox --- */
+.content-card {
+    display: flex;
+    flex-direction: row; /* Elementos lado a lado en pantalla grande */
+    align-items: center;
+    gap: 40px;
+}
+
+.media-content, .text-content {
+    flex: 1; /* Ambos ocupan el mismo espacio */
+}
+
+.main-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/* --- Punto 6: Estilos para el Botón --- */
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 28px;      /* Padding interno */
+    border: none;
+    border-radius: 50px;     /* Borde redondeado */
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+    margin-top: 15px;        /* Margen superior */
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.main-footer {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* --- Punto 8: Media Query para diseño responsivo --- */
+/* Cuando la pantalla es menor a 800px */
+@media (max-width: 800px) {
+    .content-card {
+        flex-direction: column; /* Apila la imagen sobre el texto */
+        text-align: center;
+    }
+
+    .fruit-list {
+        display: inline-block;
+        text-align: left; /* Mantiene la lista alineada a la izquierda aunque el texto se centre */
+    }
+
+    .main-header h1 {
+        font-size: 1.8rem;
+    }
+}
